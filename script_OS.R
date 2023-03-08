@@ -128,7 +128,7 @@ summary(m1)#
 anova(m0,m1)#0.208
 m2<-(coxph(Surv(Time_OS,Event_OS)~RSI*TD,data=rsi.all[rsi.all$Site=="melanoma",]))
 summary(m2)# 
-anova(m1,m2)#0.382
+anova(m1,m2)# there is no interaction because there is little variance in dose NA
 
 # glioma where they also adjusted for MGMT expression - we shall first look
 # without it - its important to note that for some reason this was the only
